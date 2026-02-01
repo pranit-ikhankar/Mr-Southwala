@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700&family=Permanent+Marker&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050505;
+  --surface: #121212;
+  --surface-highlight: #1E1E1E;
+  --primary: #FFD028;
+  --secondary: #0F392B;
+  --accent: #F94C10;
+  --text-primary: #EDEDED;
+  --text-secondary: #A1A1AA;
+  --border: #27272A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.font-heading {
+  font-family: 'Anton', sans-serif;
+}
+
+.font-accent {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.font-body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Text stroke for outlined text */
+.text-stroke {
+  -webkit-text-stroke: 1px var(--text-secondary);
+  color: transparent;
+}
+
+/* Skew button animation */
+.skew-btn {
+  transform: skewX(-10deg);
+}
+
+.skew-btn > * {
+  transform: skewX(10deg);
+}
+
+/* Glow effect on hover */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 208, 40, 0.3);
+}
+
+/* Smooth image zoom */
+.img-zoom {
+  transition: transform 0.5s ease-out;
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Fade up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
