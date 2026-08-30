@@ -31,7 +31,6 @@
   - [Building for Production](#building-for-production)
 - [Customization Guide](#-customization-guide)
 - [Contributing](#-contributing)
-- [License](#-license)
 
 ---
 
@@ -184,10 +183,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 5. Open a Pull Request
 
 ---
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 <br/>
 
